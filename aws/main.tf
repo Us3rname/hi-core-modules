@@ -12,8 +12,8 @@ provider "aws" {
   region = "eu-west-1"
 }
 
-module "name" {
-  source = "./modules/resources/aws-s3"
-  bucket_name = "pkr-terraform"
-  version = "value"
+module "aws-s3" {
+  source = "git@github.com:Us3rname/hi-core-modules.git//aws/modules/resources/aws-s3"
+  bucket_name = "pkr-terraform-2"
+  # version = "value"
 }
